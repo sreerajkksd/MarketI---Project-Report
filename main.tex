@@ -2,6 +2,8 @@
 \usepackage[pdftex]{graphicx}     
 \usepackage{fancyhdr}
 \usepackage{setspace}
+\usepackage{sectsty}  
+
 \usepackage{times}
 \usepackage{mathptmx}
 \usepackage{lscape}
@@ -9,7 +11,6 @@
 \usepackage[english]{babel}
 \usepackage[T1]{fontenc}
 \usepackage{etoolbox}
-\usepackage{titlesec}
 \usepackage[utf8]{inputenc}
 \usepackage{geometry}
 \usepackage{listings}
@@ -47,18 +48,11 @@
 	showtabs=false,
 	captionpos=b
 }
-
-%\renewcommand*{\chapterheadstartvskip}{\vspace*{1cm}}
-%\renewcommand*{\chapterheadendvskip}{\vspace{2cm}}
-\makeatletter
-\setcounter{secnumdepth}{5}
-% \patchcmd{<cmd>}{<search>}{<replace>}{<success>}{<failure>}
-\patchcmd{\@makechapterhead}{\huge}{\large}{}{}% for \chapter
-\patchcmd{\@makechapterhead}{\Huge}{\large}{}{}% for \chapter
-\patchcmd{\@makeschapterhead}{\Huge}{\large}{}{}% for \chapter*
+\chapterfont{\centering}
+\sectionfont{\fontsize{12}{15}}
 \graphicspath{ {images/} }
+\setcounter{secnumdepth}{5}
 
-\makeatother
 \pagestyle{fancy}
 \fancyhf{} 
 \lhead{\footnotesize Project Report 2016}
@@ -71,38 +65,20 @@
 \renewcommand{\footrulewidth}{0.4pt}
 \linespread{1.3}
 
-
-
-\lstset{frame=tb,
-  language=HTML,
-  aboveskip=2mm,
-  belowskip=2mm,
-  showstringspaces=false,
-  columns=flexible,
-  basicstyle={\scriptsize\ttfamily},
-  numbers=none,
-  breaklines=true,
-  breakatwhitespace=true,
-}
-
 \begin{document}
 
 \begin{abstract}
 This project is aiming at providing information about the trending technologies and market watch to the common man. Data sources which are possible to contain information regarding the Technology updates are RSS Feeds and social media. Data is extracted from these sources. Collected articles from the websites are tagged according the contexts and taxonomies. Triplet relations are extracted from these articles using NLP. Stanford Core NLP, Alchemy are the tools used for processing the articles. Triplets obtained will be put in a graph database. A triplet represents the entity – entity – relationship model. Entities can be a Company, a Product, a Technology or an industry. Neo4j is the graph database used for this purpose. Finally by using the predefined graph traversals and querying intelligence such as Competitors of a product, company, technology and useful information such as location based searching for different companies can be easily obtained. A web console will be provided for manual searching using the D3.js library. We have also provided a webpage displaying technology and market trends, i.e., the data we are having in our database .Languages used will be Java and Python for data extraction, relation extraction, tagging etc. Node JS will be server side backend. Java Script for the web front end. Neo4j  PostgreSQL will be databases.
 \end{abstract}
 
-
+\pagenumbering{roman}
+\clearpage
+\addcontentsline{toc}{chapter}{\listfigurename}
 \tableofcontents		
-	 
- 	
-%\pagenumbering{roman\tableofcontents
-	
-	
 \listoffigures
 
 \chapter{Introduction}
 \input{chapters/introduction.tex}
-
 
 \chapter{Requirement Analysis}
 \input{chapters/requirements.tex}
