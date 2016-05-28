@@ -48,7 +48,7 @@ The response to the rest call is received in json format and need to be parsed t
 \paragraph*{CrunchBase API v2.0}
 \hfill \break
 The CrunchBase API gives developers, access to query the CrunchBase Dataset for both paginated lists of specific types of Items (e.g., Companies) and details about individual Items (e.g., the properties and relationships of a specific Company).
-Developers can navigate through the Dataset by retrieving and inspecting individual Items and their relationships. Each detailed Item response includes not only the properties of the Item (e.g., a Company's name, founding date, and profile image) but also a list of all of its relationship types (e.g.,"competitors","current team").
+Developers can navigate through the Dataset by retrieving and inspecting individual Items and their relationships. Each detailed Item response includes not only the properties of the Item (e.g., a Company's name, founding date, and profile image) but also a list of all of its relationship types (e.g.,"competitors","current team").\cite{clearbit}
 \paragraph*{API invocation format}
 \hfill \break
 The calls to the API module are done as rest calls, passing the company name as the parameter.
@@ -78,7 +78,7 @@ The API allows only a limited number of calls to be made per account holder per 
 \subsubsection{Extraction from RSS feeds}
 \paragraph*{ROME API}
 \hfill \break
-Rome is based around an idealized and abstract model of a Newsfeed or "Syndication Feed". Rome can parse any format of Newsfeed, including RSS variants and Atom, into this model. Rome can convert from model representation to any of the same Newsfeed output formats. Here we use the API module to parse the response provided by the feed in XML/Atom format.
+Rome is based around an idealized and abstract model of a Newsfeed or "Syndication Feed". Rome can parse any format of Newsfeed, including RSS variants and Atom, into this model. Rome can convert from model representation to any of the same Newsfeed output formats. Here we use the API module to parse the response provided by the feed in XML/Atom format.\cite{romeapidocs}
 
 \paragraph*{API invocation format}
 \hfill
@@ -94,7 +94,7 @@ The API responds by providing an object that contains the parsed details of the 
 \par When we are done collecting the URLs for the articles, the next step is to retrieve the text articles from the concerned URLs. 
 
 \subsubsection{Extracting article text}
-\paragraph*{BOILERPIPE API}
+\paragraph*{Boilerpipe API}
 \hfill \break
 The URLs to articles return a page containing the concerned article as well as other elements such as advertisements, hyperlinks to other pages, promotional details etc. For the extracted data to be of some value, it is needed to retrieve only the potential article text from the URL and Boiler pipe API serves this need.
 \paragraph*{API invocation format}
@@ -170,7 +170,7 @@ Examples for grammars involving companies and products in Technology field may b
 
 \paragraph*{AlchemyAPI}
 \hfill \break
-AlchemyAPI uses natural language processing technology and machine learning 	algorithms to extract semantic meta-data from content, such as information on people, 	places, companies, topics, facts, relationships, authors, and languages. AlchemyAPI 	provides easy-to-use mechanisms to identify positive/negative sentiment within any 	document or web page. AlchemyAPI Sentiment Analysis APIs are capable of computing 	document-level sentiment, user-specified sentiment targeting, entity-level sentiment, 	emoticons and keyword-level sentiment. Multiple modes of sentiment analysis provide 	for a variety of use cases ranging from social media monitoring to trend analysis. In our system, we are particularly interested in using AlchemyAPI to retrieve keywords and relations from the input articles.
+AlchemyAPI uses natural language processing technology and machine learning 	algorithms to extract semantic meta-data from content, such as information on people, 	places, companies, topics, facts, relationships, authors, and languages. AlchemyAPI 	provides easy-to-use mechanisms to identify positive/negative sentiment within any 	document or web page. AlchemyAPI Sentiment Analysis APIs are capable of computing 	document-level sentiment, user-specified sentiment targeting, entity-level sentiment, 	emoticons and keyword-level sentiment. Multiple modes of sentiment analysis provide 	for a variety of use cases ranging from social media monitoring to trend analysis. In our system, we are particularly interested in using AlchemyAPI to retrieve keywords and relations from the input articles.\cite{alchemy-relation}
 
 \paragraph*{API invocation format}
 \hfill
@@ -224,7 +224,7 @@ The intermediate layer used to pre-process the extracted relations, it removes t
 \section{Module 4 - Front end}
 \par The three user interfaces as described in the web interface design is implemented using the following libraries.
 \subsection{Bootstrap}
-\par Bootstrap is a free and open-source front-end library for creating websites and web applications. It contains HTML- and CSS-based design templates for typography, forms, buttons, navigation and other interface components, as well as optional JavaScript extensions. It aims to ease the development of dynamic websites and web applications
+\par Bootstrap is a free and open-source front-end library for creating websites and web applications. It contains HTML- and CSS-based design templates for typography, forms, buttons, navigation and other interface components, as well as optional JavaScript extensions. It aims to ease the development of dynamic websites and web applications.\cite{bootstrap}
 \begin{itemize}
 \item Bootstrap is a front end web framework, that is, an interface for the user, unlike the server-side code which resides on the "back end" or server.
 \item Bootstrap is the second most-starred project on GitHub, with over 95 thousand stars and more than 40 thousand forks.
